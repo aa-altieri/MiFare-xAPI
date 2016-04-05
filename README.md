@@ -44,19 +44,28 @@ All in all, I enjoyed the project.  I met my five goals.  I feel like I carried 
 ##Parts
 
 Here are the two main boards I used to make all this work: 
-[Particle Photon](https://store.particle.io/) - Arduino-compatible micro-controller that has built-in Wifi support.
-[Mifare RC522 Card Reader](http://www.ebay.com/itm/Mifare-RC522-Card-Read-Antenna-RF-Module-RFID-Reader-IC-Card-Proximity-Module-/311563538690)
 
-Other parts used were:
+[Particle Photon](https://store.particle.io/) - Arduino-compatible micro-controller that has built-in Wifi support.
+
+[Mifare RC522 Card Reader](http://www.ebay.com/itm/Mifare-RC522-Card-Read-Antenna-RF-Module-RFID-Reader-IC-Card-Proximity-Module-/311563538690) - The bit that you hold the NFC card upto to read/scan it.
+
+
+###Other parts used were:
+
 [LED Backlights](https://www.adafruit.com/products/1622) - Used to signal if the card is accepted or not.  But any LEDs would work.
+
 [RadioShack Mini Board](https://www.radioshack.com/products/dual-mini-board) - Basically, this is to mount the Photon to the plexiglass stand.
+
 [0.1" Female Headers](https://www.adafruit.com/products/598) - Used to attach the Photon to the Mini Board.
 Various leads to connect everything together.
+
 3 mm mounting hardware
+
 I wrapped the LED backlights in gel sheets.  Any sheet will do, I used [these.](http://www.amazon.com/dp/B00W93FQNM/ref=cm_sw_su_dp)
 
 
-###NOTE:  The code provided here is meant to illustrate the steps to build and send the xAPI statements.  So... it's not great code.  It works fine.  But it's clearly not optimized, and, really, there are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read.  If you want to build an actual production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
+##NOTICE
+The code provided here is meant to illustrate the steps to build and send the xAPI statements.  So... it's not great code.  It works fine.  But it's clearly not optimized, and, really, there are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read.  If you want to build an actual production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
 
 If you have any questions about any part of this project, please feel free to reach out to me either here or directly.  Thanks for visiting!
 

@@ -57,11 +57,14 @@ Here are the two main boards I used to make all this work:
 [RadioShack Mini Board](https://www.radioshack.com/products/dual-mini-board) - Basically, this is to mount the Photon to the plexiglass stand.
 
 [0.1" Female Headers](https://www.adafruit.com/products/598) - Used to attach the Photon to the Mini Board.
+
 Various leads to connect everything together.
 
 3 mm mounting hardware
 
 I wrapped the LED backlights in gel sheets.  Any sheet will do, I used [these.](http://www.amazon.com/dp/B00W93FQNM/ref=cm_sw_su_dp)
+
+
 
 
 ##NOTICE

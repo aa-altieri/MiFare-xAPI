@@ -13,20 +13,20 @@ So my goal was to answer that question.  But I set some additional goals.  My bu
 
 This is what I came up with:
 
-![](assets/scanner1.jpg)
+![](assets/scanner1.jpeg)
 
 ##My Rig
 I connected an RC522 MiFare card scanner to a Particle Photon micro-controller.  When you scan the MiFare card or fob, the Photon builds an xAPI statement to tell the LRS that the card was scanned.  In this example, it says The Front Door (where I would have this scanner) scanned the card, using the card ID as the object.  It tells the user that it's "thinking" by illuminating the yellow LED:
 
-![](assets/thinking.jpg)
+![](assets/thinking.jpeg)
 
 After telling the LRS that the card was scanned, We need to see if the card holder is allowed in or not.  So the Photon builds an xAPI query looking for the last statement sent to the LRS where "admin@omnesnet.com" was the actor and the card ID was the object.  Then the code searches the result for the word "approved."  If found, the Photon will illuminate the Green LED:
 
-![](assets/yes.jpg)
+![](assets/yes.jpeg)
 
 If "approved" is not found, then you get denied:
 
-![](assets/denied.jpg)
+![](assets/denied.jpeg)
 
 I cheat a little here, though.  Basically, if the query result has the word "approved" in it, then you get in.  If it doesn't, then you get denied.   This way, I don't have to parse out the actual verb that was used.  This isn't very good code or practice, I know.  But I'm doing this to illustrate the xAPI process, not good security policy!
 
@@ -43,7 +43,7 @@ All in all, I enjoyed the project.  I met my five goals.  I feel like I carried 
 
 ##Parts
 
-Here are the two main boards I used to make all this work:
+Here are the two main boards I used to make all this work: 
 [Particle Photon](https://store.particle.io/) - Arduino-compatible micro-controller that has built-in Wifi support.
 [Mifare RC522 Card Reader](http://www.ebay.com/itm/Mifare-RC522-Card-Read-Antenna-RF-Module-RFID-Reader-IC-Card-Proximity-Module-/311563538690)
 
@@ -56,7 +56,7 @@ Various leads to connect everything together.
 I wrapped the LED backlights in gel sheets.  Any sheet will do, I used [these.](http://www.amazon.com/dp/B00W93FQNM/ref=cm_sw_su_dp)
 
 
-#NOTE:  The code provided here is meant to illustrate the steps to build and send the xAPI statements.  So... it's not great code.  It works fine.  But it's clearly not optimized, and, really, there are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read.  If you want to build an actual production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
+###NOTE:  The code provided here is meant to illustrate the steps to build and send the xAPI statements.  So... it's not great code.  It works fine.  But it's clearly not optimized, and, really, there are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read.  If you want to build an actual production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
 
 If you have any questions about any part of this project, please feel free to reach out to me either here or directly.  Thanks for visiting!
 

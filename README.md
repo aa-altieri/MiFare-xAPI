@@ -65,6 +65,15 @@ Lastly, I found a potential issue with the [xAPI Specification](https://github.c
 
 All in all, I enjoyed the project.  I met my five goals.  I feel like I carried forward the spirit of the work that Mr. Rockwell started.  And I learned some stuff along the way.  Wins all around.
 
+#### Where do we go from here?
+Like Mr. Rickwell, I'll ask this question of you.  I did not build this as an answer unto itself.  It's not a final product.  This was meant as an illustration of what's possible.  Given the advances in hardware, this build could easily be expanded upon.  And I'm sure that other folks would look at this and see areas I made mistakes, or things that can be improved, or even going in an entirely different direction.  So, please, I invite you to take this example and run with it.  Add to it.  Change it.  Take the next step with it.  I can't wait to see what you come back with!
+
+If you have any questions about any part of this project, or need help with this or any other xAPI/IoT projects, please feel free to reach out to me either here or directly!
+
+--anthony
+
+
+
 #### Parts
 
 Here are the two main boards I used to make all this work:
@@ -90,7 +99,3 @@ I wrapped the LED backlights in gel sheets.  Any sheet will do, I used [these.](
 
 
 **NOTE:**  This code is meant to illustrate the steps to build and send the xAPI statements in an Arduino-compatible environment such as the Particle IDE.  There are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read and see the steps more clearly.  If you want to build a more production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
-
-If you have any questions about any part of this project, please feel free to reach out to me either here or directly.  Thanks for visiting!
-
---anthony

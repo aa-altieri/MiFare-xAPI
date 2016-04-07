@@ -71,7 +71,7 @@ Various leads to connect everything together.
 I wrapped the LED backlights in gel sheets.  Any sheet will do, I used [these.](http://www.amazon.com/dp/B00W93FQNM/ref=cm_sw_su_dp)
 
 
-##### NOTE:  This code is meant to illustrate the steps to build and send the xAPI statements in an Arduino-compatible environment such as the Particle IDE.  There are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read and see the steps more clearly.  If you want to build a more production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
+**NOTE:**  This code is meant to illustrate the steps to build and send the xAPI statements in an Arduino-compatible environment such as the Particle IDE.  There are better ways to have done some of the tasks involved.  But I laid out the code this way so it was, in my opinion, easier to read and see the steps more clearly.  If you want to build a more production-ready product, you'll want to tighten up the code some.  A lot.  And... don't cheat when it comes to security policies.
 
 If you have any questions about any part of this project, please feel free to reach out to me either here or directly.  Thanks for visiting!
 

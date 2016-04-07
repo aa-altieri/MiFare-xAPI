@@ -22,7 +22,7 @@ This is what I came up with:
 ![](assets/scanner1.jpeg)
 
 #### My Rig
-I used a Particle Photon micro-controller to drive a RC522 MiFare card antenna.  When you scan the MiFare card or fob, the Photon builds an xAPI statement to tell the LRS that the card was scanned.  In this example, it says The Front Door (where I would have this scanner) scanned the card, using the card UID as the activity object ID.  It tells the user that it's "thinking" by illuminating the yellow LED:
+I used a [Particle Photon](https://www.particle.io/prototype) micro-controller to drive a RC522 MiFare card antenna.  When you scan the MiFare card or fob, the Photon builds an xAPI statement to tell the LRS that the card was scanned.  In this example, it says The Front Door (where I would have this scanner) scanned the card, using the card UID as the activity object ID.  It tells the user that it's "thinking" by illuminating the yellow LED:
 
 ![](assets/thinking.jpeg)
 
@@ -37,6 +37,24 @@ If "approved" is not found, then you get denied:
 I cheat a little here, though.  Basically, if the query result has the word "approved" in it, then you get in.  If it doesn't, then you get denied.   This way, I don't have to parse out the actual verb that was used.  This isn't very good code or practice, I know.  But I'm doing this to illustrate the xAPI process, not good security policy!
 
 It is built to be headless, so you do not need to have the device connected to a computer to run it.  However, I do have extensive serial debug statements, so if you do connect a computer to it to monitor the serial output, you can see what's happening as it steps through the code.
+
+####Why this matters
+
+So why even care about using xAPI statements from IoT devices?  Well, because I can, for one.  No lie, part of doing anything like this is purely for the academic study of what can be done.  But there is a practical pay off as well.  This build is purely to show a proof of concept.  I built the most simple device I could that met all of the five goals listed above.  That said, consider the following scenario:
+
+> Certain confined spaces require special training to enter.  OSHA is pretty strict on these things.  So you want to ensure that no one enters a designated confined space without a CURRENT certification/permit and the proper training.
+
+So, lets take a look at this build and how it can help:
+
+What is Required | What can be done
+---------------|-----------------
+Log attempts to access confined space | The scanner sends a statement for every card scanned.
+Limit access to those authorized by management | The scanner sends a query to see if the card is allowed access
+Limit access to those with current training | The scanner can send a second query to confirm level of training
+
+So, even this prototype could be used with the slightest of modifications to meet the primary needs of such a door lock.  All we'd need to do, really, is add a second query to the other system.  Moreover, notice that we're not only able to pull information from the HR records denoting who is allowed in that part of the building, but also from the LMS, confirming the level of certification/training.  This is the heart of interoperable nature of xAPI.  We can pull information from disparate systems that previously either required potentially extensve development, or was simply not possible to gather and correlate.  However, using a ubiquitous API to cull data in real time from disparate sources, now... it's easy! 
+
+Assuming, of course, that your HR system and LMS both can accept and process xAPI queries.
 
 #### What I learned
 I learned this was a hoot to build.  Frustrating as hell at a few points.  You do have to be a little careful how big the xAPI statements and queries get.  So take memory into account.  I don't do any garbage collection as I thought it would get in the way of illustrating the xAPI functions.  Again, in a real-world setting, I'd take better care to manage that.

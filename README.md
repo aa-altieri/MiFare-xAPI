@@ -19,20 +19,20 @@ A couple years on, the available hardware is far superior.  Micro-controllers ar
 
 This is what I came up with:
 
-![](assets/scanner1.jpg)
+![](assets/scanner1.jpeg)
 
 #### My Rig
 I used a Particle Photon micro-controller to drive a RC522 MiFare card antenna.  When you scan the MiFare card or fob, the Photon builds an xAPI statement to tell the LRS that the card was scanned.  In this example, it says The Front Door (where I would have this scanner) scanned the card, using the card UID as the activity object ID.  It tells the user that it's "thinking" by illuminating the yellow LED:
 
-![](assets/thinking.jpg)
+![](assets/thinking.jpeg)
 
 After telling the LRS that the card was scanned, We need to see if the card holder is allowed in or not.  So the Photon builds an xAPI query looking for the last statement sent to the LRS where "admin@omnesnet.com" was the actor and the card ID was the object.  Then the code searches the result for the word "approved."  If found, the Photon will illuminate the Green LED:
 
-![](assets/yes.jpg)
+![](assets/yes.jpeg)
 
 If "approved" is not found, then you get denied:
 
-![](assets/denied.jpg)
+![](assets/denied.jpeg)
 
 I cheat a little here, though.  Basically, if the query result has the word "approved" in it, then you get in.  If it doesn't, then you get denied.   This way, I don't have to parse out the actual verb that was used.  This isn't very good code or practice, I know.  But I'm doing this to illustrate the xAPI process, not good security policy!
 

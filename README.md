@@ -44,7 +44,7 @@ So why even care about using xAPI statements from IoT devices?  Well, because I 
 
 > Certain confined spaces require special training to enter.  OSHA is pretty strict on these things.  So you want to ensure that no one enters a designated confined space without a CURRENT certification/permit and the proper training.
 
-So, lets take a look at this build and how it can help:
+So, let's take a look at this build and how it can help:
 
 What is Required | What can be done
 ---------------|-----------------
@@ -52,7 +52,7 @@ Log attempts to access confined space | The scanner sends a statement for every 
 Limit access to those authorized by management | The scanner sends a query to see if the card is allowed access
 Limit access to those with current training | The scanner can send a second query to confirm level of training
 
-So, even this prototype could be used with the slightest of modifications to meet the primary needs of such a door lock.  All we'd need to do, really, is add a second query to the other system.  Moreover, notice that we're not only able to pull information from the HR records denoting who is allowed in that part of the building, but also from the LMS, confirming the level of certification/training.  This is the heart of interoperable nature of xAPI.  We can pull information from disparate systems that previously either required potentially extensve development, or was simply not possible to gather and correlate.  However, using a ubiquitous API to cull data in real time from disparate sources, now... it's easy! 
+So, even this prototype could be used with the slightest of modifications to meet the primary needs of such a door lock.  All we'd need to do, really, is add a second query to the other system.  Moreover, notice that we're not only able to pull information from the HR records denoting who is allowed in that part of the building, but also from the LMS, confirming the level of certification/training.  This is the heart of the interoperable nature of xAPI.  We can pull information from disparate systems that previously either required potentially extensve development, or was simply not possible to gather and correlate.  However, using a ubiquitous API to cull data in real time from disparate sources, now... it's easy! 
 
 Assuming, of course, that your HR system and LMS both can accept and process xAPI queries.
 
@@ -66,7 +66,7 @@ Lastly, I found a potential issue with the [xAPI Specification](https://github.c
 All in all, I enjoyed the project.  I met my five goals.  I feel like I carried forward the spirit of the work that Mr. Rockwell started.  And I learned some stuff along the way.  Wins all around.
 
 #### Where do we go from here?
-Like Mr. Rickwell, I'll ask this question of you.  I did not build this as an answer unto itself.  It's not a final product.  This was meant as an illustration of what's possible.  Given the advances in hardware, this build could easily be expanded upon.  And I'm sure that other folks would look at this and see areas I made mistakes, or things that can be improved, or even going in an entirely different direction.  So, please, I invite you to take this example and run with it.  Add to it.  Change it.  Take the next step with it.  I can't wait to see what you come back with!
+Like Mr. Rockwell, I'll ask this question of you.  I did not build this as an answer unto itself.  It's not a final product.  This was meant as an illustration of what's possible.  Given the advances in hardware, this build could easily be expanded upon.  And I'm sure that other folks would look at this and see areas I made mistakes, or things that can be improved, or even going in an entirely different direction.  So, please, I invite you to take this example and run with it.  Add to it.  Change it.  Take the next step with it.  I can't wait to see what you come back with!
 
 If you have any questions about any part of this project, or need help with this or any other xAPI/IoT projects, please feel free to reach out to me either here or directly!
 
